@@ -29,6 +29,7 @@ body {
     padding: 0 1.5rem;
     margin-top: 20px;
     margin-bottom: 10px;
+    background: white;
 }
 
 .main-bg-image {
@@ -37,8 +38,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(https://static-assets.codecademy.com/Courses/Learn-CSS/Functions/main-bg-image.jpg) no-repeat;
+    background: url(argentinaa.jpg) no-repeat;
     background-size: cover;
+    filter: brightness(0.6);
 }
 
 .card {
@@ -48,7 +50,7 @@ body {
     background: #fff;
     box-shadow: 2px .8rem 1rem rgba(0, 0, 0, .09);
     border-radius: 8px 8px 0px 0px;
-    width: clamp(200px, 90%, 600px);
+    width: clamp(100px, 90%, 600px);
 }
 
 .under {
@@ -71,10 +73,17 @@ body {
     background-color: gray;
     z-index: -1;
     transition: transform 1s;
+    transition: filter 1s;
+    transition: all 2s ease-in-out;
     border-radius: 8px 8px 0px 0px;
     background-image: url(images/argentina.jpg);
     background-position: center;
     background-size: cover;
+}
+
+.card:hover .bg-image {
+    filter: saturate(0.2);
+    transform: scale(1.4);
 }
 
 .location-details {
@@ -110,7 +119,7 @@ body {
 }
 
 .card-body {
-    background: #fff;
+    background: rgb(255, 247, 255);
     padding: 2rem 3rem;
     position: relative;
 }
@@ -119,7 +128,7 @@ body {
 .card-body::after {
     content: '';
     position: absolute;
-    border: 2px solid;
+    border: 2px solid hsl(25, 47%, 86%);
 }
 
 .card-body::before {
@@ -157,18 +166,20 @@ body {
 }
 
 .header-modifier {
+    display: inline-block;
     color: #6CACE4;
     transition: transform .8s ease-in-out;
+    filter: drop-shadow(10px 5px 0.2rem rgba(236, 217, 203, 0.7));
 }
 
 .card-text {
+    display: inline-block;
     position: relative;
     text-align: center;
     width: clamp(50px, 80%, 600px);
     border-radius: 8px;
     padding: 5px 0;
     overflow-y: hidden;
-    overflow-wrap: break-word;
     left: calc(50% - 40%);
     font-size: clamp(1.5rem, 1.8vw, 1.8rem);
 }
@@ -178,6 +189,7 @@ ul.activities {
     list-style: circle;
     position: relative;
     font-weight: bold;
+    color: hsla(208, 69%, 66%, 0.6);
     margin: calc(1vw + 0.5rem) 2rem;
 }
 
